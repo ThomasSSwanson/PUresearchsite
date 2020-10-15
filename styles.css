@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Noto Serif JP", serif;
   font-weight: 400;
@@ -23,6 +27,9 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-color: var(--primary-color);
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 77px;
 }
 
 h1 {
@@ -36,8 +43,8 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 /* HEADER */
@@ -139,6 +146,7 @@ button:focus,
 
 /* INDEX */
 
+.contact-page-box,
 .index-page-box {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -167,7 +175,7 @@ button:focus,
 
 .blog-posts,
 .intro {
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 /* ABOUT */
@@ -205,5 +213,83 @@ button:focus,
 .research-details,
 .procedures,
 .terminology {
-  padding: 20px;
+  padding: 20px 40px;
+}
+
+/* CONTACT */
+
+.contact-form-box,
+.contact-info-box {
+  border: 2px solid var(--dark-blue);
+  background-color: var(--off-white);
+  grid-column: 1/2;
+}
+
+.contact-info-box {
+  grid-row: 1/2;
+}
+
+.contact-form-box {
+  grid-row: 2/3;
+}
+
+.contact-info,
+.contact-form {
+  padding: 20px 40px;
+}
+
+.contact-info-text {
+  padding-left: 90px;
+}
+
+/* form styling */
+
+.contact-form-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* FOOTER */
+
+.spacer {
+  height: 100px;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  padding: 10px;
+  font-size: 80%;
+  color: var(--off-white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 77px;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
 }
